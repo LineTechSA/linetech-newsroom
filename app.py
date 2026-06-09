@@ -1,24 +1,37 @@
 from flask import Flask
+import requests
+from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return """
-    <h1>🎮 LineTech Newsroom</h1>
+    try:
+        url = "https://www.rockstargames.com/newswire"
+        response = requests.get(url, timeout=10)
 
-    <h2>🚨 GTA 6 Tracker</h2>
-    <p>قريباً سيتم جلب أخبار Rockstar تلقائياً.</p>
+        soup = BeautifulSoup(response.text, "html.parser")
 
-    <h2>🧟 Resident Evil News</h2>
-    <p>قريباً سيتم جلب أخبار Capcom تلقائياً.</p>
+        title = "تعذر جلب الخبر"
 
-    <h2>🎖️ Battlefield</h2>
-    <p>قريباً...</p>
+        h2 = soup.find("h2")
+        if h2:
+            title = h2.get_text(strip=True)
 
-    <h2>🎮 Call of Duty</h2>
-    <p>قريباً...</p>
-    """
+        return f"""
+        <h1>🎮 LineTech Newsroom</h1>
+
+        <h2>🚨 آخر خبر من Rockstar</h2>
+        <p>{title}</p>
+
+        <hr>
+
+        <h2>🧟 Resident Evil</h2>
+        <p>قريباً...</p>
+        """
+
+    except Exception as e:
+        return f"<h1>خطأ</h1><p>{e}</p>"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
