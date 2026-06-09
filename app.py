@@ -252,3 +252,128 @@ def home():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
+<hr style="margin:40px 0;border:1px solid #222;">
+
+<h2 style="margin-bottom:20px;">🌍 مصادر الأخبار المرتبطة</h2>
+
+<div class="grid">
+
+    <div class="card">
+        <div class="card-header">Rockstar</div>
+        <div class="card-body">
+            <a href="https://www.rockstargames.com/newswire" target="_blank">
+                فتح المصدر
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Capcom</div>
+        <div class="card-body">
+            <a href="https://www.capcom-games.com/en-us/" target="_blank">
+                فتح المصدر
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">PlayStation Blog</div>
+        <div class="card-body">
+            <a href="https://blog.playstation.com/" target="_blank">
+                فتح المصدر
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Xbox Wire</div>
+        <div class="card-body">
+            <a href="https://news.xbox.com/" target="_blank">
+                فتح المصدر
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Battlefield</div>
+        <div class="card-body">
+            <a href="https://www.ea.com/games/battlefield/news" target="_blank">
+                فتح المصدر
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Call of Duty Blog</div>
+        <div class="card-body">
+            <a href="https://www.callofduty.com/blog" target="_blank">
+                فتح المصدر
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<hr style="margin:40px 0;border:1px solid #222;">
+
+<h2>📦 توليد البكج الكامل</h2>
+
+<textarea
+style="
+width:100%;
+height:200px;
+background:#151515;
+color:white;
+border:1px solid #333;
+padding:15px;
+margin-top:10px;
+border-radius:10px;
+"
+placeholder="سيظهر البكج هنا لاحقاً...">
+</textarea>
+
+<br><br>
+
+<button
+style="
+background:#ff0000;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+">
+Generate Package
+</button>
+
+<hr style="margin:40px 0;border:1px solid #222;">
+
+<h2>🖼️ برومبت الثمنيل</h2>
+
+<textarea
+style="
+width:100%;
+height:150px;
+background:#151515;
+color:white;
+border:1px solid #333;
+padding:15px;
+margin-top:10px;
+border-radius:10px;
+"
+placeholder="سيظهر برومبت الثمنيل هنا لاحقاً...">
+</textarea>
+
+<br><br>
+
+<button
+style="
+background:#222;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+">
+Generate Thumbnail Prompt
+</button>
