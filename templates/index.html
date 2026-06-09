@@ -92,8 +92,18 @@ cursor:pointer;
 </div>
 
 <div class="card">
-<h3>🧟 Resident Evil</h3>
-<p>بانتظار ربط أخبار كابكوم</p>
+<h3>🧟 Resident Evil News</h3>
+
+{% for article in resident_evil_news %}
+
+<p>
+<a href="{{ article.url }}" target="_blank">
+{{ article.title }}
+</a>
+</p>
+
+{% endfor %}
+
 </div>
 
 <div class="card">
